@@ -1,7 +1,8 @@
+
 const MongoClient = require("mongodb").MongoClient;
 
-const url =
-  "mongodb+srv://anouar:anouar4070@cluster0.ooicrpn.mongodb.net/products_test?retryWrites=true&w=majority&appName=Cluster0";
+const url = process.env.MONGO_URI;
+
 
 const createProduct = async (req, res, next) => {
   const newProduct = {
